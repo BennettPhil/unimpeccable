@@ -62,9 +62,62 @@ a marquee of headlines that cycles in `steps(1, end)` every 1200ms. no scroll. n
 
 ONE element per page reveals on scroll via `step(1, end)` — it's there, then it's there. no fade-in, no slide-up.
 
+### snap-flinch hover
+
+NOT a smooth lift. the element FLINCHES.
+
+```css
+.card {
+  transition: none;
+  box-shadow: 8px 8px 0 0 #000;
+}
+.card:hover {
+  box-shadow: 24px 24px 0 0 #000;
+  transform: translate(-3px, -3px);
+}
+```
+
+shadow jumps OUT (16px more offset) and the element moves the opposite direction simultaneously. visual: the card got startled. use on cards, blocks, callouts. never on functional buttons (those stay snap-invert per `hostile-interaction.md`).
+
+a card that lifts smoothly is impeccable. a card that flinches is unimpeccable.
+
+### ambient tic
+
+a single decorative element jitters ONCE every N seconds (8 to 30s). not a loop. a tic.
+
+```css
+@keyframes tic {
+  0%, 95% { transform: translate(0); }
+  95.5% { transform: translate(2px, -1px); }
+  96% { transform: translate(-3px, 2px); }
+  96.5% { transform: translate(1px, 1px); }
+  97%, 100% { transform: translate(0); }
+}
+.tic { animation: tic 12s infinite steps(1, end); }
+```
+
+dead static 95% of the cycle, jitter for ~360ms, dead static again. eye catches it once and isn't sure it happened. use on ONE element per page (hero word, primary logomark, a single headline). NEVER on multiple at once — the eye would clock the rhythm and it becomes decoration.
+
+### scroll-triggered follower
+
+a decorative element associated with a school sticks to the viewport edge until the next school's section invalidates it. the page is being haunted by whichever school you're currently inside.
+
+```css
+.section--memphis { position: relative; }
+.section--memphis .follower {
+  position: sticky;
+  top: 24px;
+  right: 24px;
+}
+```
+
+the follower sits at `position: sticky` inside its parent section. when the user scrolls into the next section, the parent scrolls off and the follower disappears.
+
+works for: memphis squiggle, y2k HUD bracket, zine paper-clip, neubrutalism sticker corner, radical-italian grid line. one follower per major section, showcase register only.
+
 ### the signature moment
 
-one transition per page may have actual choreography. examples:
+one transition per page (or per major section in showcase register) may have actual choreography. examples:
 - a heading slams in from off-screen (`translateX(-100%) → 0` in 150ms with overshoot)
 - a color block cascades across the viewport in chunky steps
 - type cycles through 3 wrong fonts and lands on the right one

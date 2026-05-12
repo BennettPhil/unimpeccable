@@ -33,26 +33,45 @@ if in doubt: ask one question. don't guess your way into chaos.
 
 every job runs the same loop. no shortcuts.
 
-1. **pick a school.** Lacquer (house default), Memphis, Radical Italian, Carson, Web Brutalism, Neubrutalism, Zine/DIY, Y2K-Dirt. read `schools/<name>.md`. if no school is named by the user, default to **Lacquer** and say so.
-2. **lock the constraints.** palette (3–5 acid tones + true black + paper-white, never #FFFFFF). type (exactly two system fonts, no webfonts). structure rules from the school. **do not deviate mid-build.**
+1. **pick the register, then the school.** read `references/page-register.md`. register is one of: PRODUCT (single page selling or operating one thing), SHOWCASE (long-scroll manifesto with multiple schools), or ARTIFACT (period piece committed to one school and one specific year). infer from the brief or ask. wrong-register pages are the #1 cause of timidity failure.
+
+   then pick the school. Lacquer (house default), Memphis, Radical Italian, Carson, Web Brutalism, Neubrutalism, Zine/DIY, Y2K-Dirt. read `schools/<name>.md`. if no school is named, default to **Lacquer** and announce both choices. in SHOWCASE register, you'll pick one school per major section, not one per page.
+2. **lock the constraints.** palette (3–5 acid tones + true black + paper-white, never #FFFFFF). type (exactly two system fonts, no webfonts, plus the `<pre><code>` exception). structure rules from the school. **do not deviate mid-build.**
 3. **build in four layers, in order:**
-   - **structure** — brutalist scaffolding. full-bleed, gutter-less or near-gutter-less, hard borders, zero border-radius.
+   - **structure** — brutalist scaffolding. full-bleed, gutter-less or near-gutter-less, hard borders, zero border-radius. in SHOWCASE register, apply page-level breaks (section bleed, viewport extension, scale variation across siblings) — see `references/broken-grid.md`.
    - **type** — set the system. abuse one font at extreme sizes. the other is the workhorse.
-   - **color / pattern** — Memphis motifs, fills, blocks. rationed, not wallpapered.
+   - **color / pattern** — Memphis motifs, fills, blocks. rationed, not wallpapered. ration scales with register — see `references/page-register.md`.
    - **texture** — halftone, photocopy grain, scan artifacts. overlay at 4–12% opacity. last.
-4. **ration the Carson moments.** ONE illegible / overlapping / broken-type moment per long page. more = meaningless.
-5. **audit twice.** first against `anti-patterns.md` (slop check). then against the ENEMY READING LIST below (polish check). both are failure modes. you must fail neither.
+4. **ration the Carson moments — per the register.** PRODUCT: one per page. SHOWCASE: one per ~1000px of scroll. ARTIFACT: from the school's rules. zero on a long page is timidity failure. more than the ration is slop.
+5. **audit three times.** first against `anti-patterns.md` SLOP check (broken). second against POLISH check (saas-tame). third against the new TIMIDITY check (well-designed anti-design that still feels safe). all three are failure modes. you must fail none.
 
 ## THE HOUSE STYLE: LACQUER
 
 when no school is specified, build in **Lacquer.** Lacquer = Memphis palette + brutalist load-bearing structure + zine texture overlay + rationed Carson moments. read `schools/lacquer.md` and treat it as binding.
+
+in SHOWCASE register, Lacquer is the house style only for the HERO and any "default" sections. each other major section adopts its own school.
+
+## SCHOOL-AT-SECTION (showcase register only)
+
+in SHOWCASE / MANIFESTO register, each major section adopts its content's school as its ENTIRE compositional grammar. not styling-inside-the-section. the section IS the school.
+
+- a section about memphis IS memphis: terrazzo background on the section, giant squiggle running horizontally through it, dot grid spilling over the edge, palette set A or C, motifs deployed at the section level. content lives INSIDE memphis-the-environment.
+- a section about web brutalism IS web brutalism: raw HTML on white, default Times, blue underlined links, no card borders, no styling. the absence of design IS the design.
+- a section about zine IS zine: photocopy grain at higher opacity than the rest of the page, ransom-note headline, handwritten margin notes, paper-clip and tape SVGs, the whole section feels scanned.
+- a section about neubrutalism IS neubrutalism: hard offset shadows on the section's containers, acid color block as the section background, "FEATURE CARD." stickers in the corners.
+- a footer with personal / "about the author" content can adopt zine (warmth) or web brutalism (cold honesty). pick one.
+
+the page changes religion every ~1000px of scroll. transitions happen at section-bleed boundaries (one section's element extends into the next). don't half-blend within a section — each section is fully its school for its full length.
+
+in PRODUCT and ARTIFACT registers this rule does NOT apply. one school wallpapers the whole page.
 
 ## REFERENCE LOAD ORDER
 
 read references on demand, not all at once. minimum on every invocation:
 
 - `MANIFESTO.md` — the stance
-- `anti-patterns.md` — the slop floor AND the polish ceiling
+- `anti-patterns.md` — SLOP, POLISH, AND TIMIDITY gates
+- `references/page-register.md` — register-specific scaling
 - `schools/<chosen>.md` — the school you're building in
 
 then load by need:
@@ -120,3 +139,16 @@ when this skill speaks — in copy, manifestos, microcopy, or error messages it 
 - enemy callouts: "they want X. we don't."
 
 instructions Claude follows are precise. the voice is feral. **both at once.** if the voice degrades the precision of an instruction, the instruction wins. precision is how chaos stays authored.
+
+## RATIONS ARE FLOORS
+
+every "X per section" or "X per page" in this skill is a FLOOR, not a ceiling. it's the minimum to read as the school. when in doubt, push further, not safer.
+
+- "2–3 memphis motifs per section" = AT LEAST 2 motifs. otherwise the section won't read as memphis. in showcase register the floor is 3.
+- "one carson moment per long page" = AT LEAST one for a single-screen page. long pages get at least one per ~1000px scroll.
+- "one signature motion per page" = at least one. showcase register: at least one per major section.
+- "3 to 5 acid hues" = at least 3. if the page only uses 2 acid hues, the palette isn't loud enough.
+
+the rations exist to PREVENT slop (random over-decoration), NOT to prevent commitment. authored chaos must be visible. if you're hesitating, push.
+
+if the user sees the result and says "more extreme," and you can't argue back specifically, the timidity gate caught you and the rations were treated as ceilings. fix it.

@@ -45,6 +45,57 @@ pull a headline or block `margin-left: -8%` so it overflows the section's notion
 
 never pull functional elements. only headlines, color blocks, decorative type, motifs.
 
+## THE THREE PAGE-LEVEL BREAKS (SHOWCASE REGISTER)
+
+the four breaks above are COMPONENT-level. these three are PAGE-level. valid only in SHOWCASE / MANIFESTO register. these are what make a long-scroll page argue with itself instead of stacking politely.
+
+### 5. SECTION BLEED
+
+a block from section N extends 60 to 200 px past the section's boundary INTO section N+1 (or N-1). the next section's background color shows around the bleed, OR the block sits on top of the section line.
+
+implement.
+
+- don't constrain the section with `overflow: hidden`. let it bleed.
+- use `margin-bottom: -120px` or `position: relative; top: 80px;` on the bleeding block.
+- ensure the bleeding block has `position: relative; z-index: 2;` so it sits above the next section.
+- the next section uses `position: relative; z-index: 1;`.
+
+use this 1 to 2 times per page. more = soup. SECTION BOUNDARIES MUST CRASH at major transitions. if all your sections butt up at flat horizontal lines, the page is a stack and you failed the timidity check.
+
+### 6. VIEWPORT EXTENSION
+
+content extends past the right edge of the viewport intentionally. radical-italian's "il monumento continuo" is the canonical example — a grid that doesn't stop at the page edge.
+
+implement.
+
+- `overflow-x: visible` on the section.
+- `body { overflow-x: hidden; }` globally so the page doesn't gain horizontal scroll.
+- a decorative element uses `position: relative; right: -240px;` or `width: calc(100% + 400px);` to push past the right edge.
+- works equally on the left edge (`left: -240px`) — a headline running off the left edge with the user expected to know what it would say.
+
+use this 1 to 2 times per page. headlines, grid lines, marquees, terrazzo blocks. not functional content. not navigation.
+
+### 7. SCALE VARIATION ACROSS SIBLINGS
+
+when displaying N items of the same kind (school cards, command rows, feature blocks) — they MUST NOT share dimensions. assign each footprint to match its content's character.
+
+if you find yourself writing `grid-template-columns: repeat(N, 1fr)` for a row of cards with the same height, **stop.** that's a catalogue. you're presenting anti-design as information design. it's a contradiction.
+
+instead.
+
+- one item is wide and dominant
+- one is small and almost-missed
+- one is rotated and overlapping its neighbors
+- one is bare (no card border, just content directly on the page background)
+- one has fake browser chrome / period-piece chrome wrapping it
+- one is a TOWER (taller than wide, content stacked vertically)
+- one is a STRIP (wider than tall, content stacked horizontally)
+- one is a SCAN (rotated, ragged-edged, halftone-overlaid)
+
+if eight schools share a footprint, you've told the user the schools are interchangeable. they aren't. each footprint argues for itself. no card respects the others' bounds.
+
+**this is the single most important page-level rule in showcase register.** more pages have failed the timidity check on this rule than any other.
+
 ## WHAT YOU DO NOT DO
 
 - random rotation on every card (this is the 2017 "fun" landing page tell)

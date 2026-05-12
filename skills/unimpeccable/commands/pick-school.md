@@ -9,18 +9,28 @@ lacquer, memphis, radical-italian, carson-raygun, web-brutalism, neubrutalism, z
 
 if no school named, default to lacquer. announce the default.
 
+before picking the school, lock the REGISTER (see `references/page-register.md`).
+
+- PRODUCT: single page selling or operating one thing. one school for the whole page.
+- SHOWCASE: long-scroll manifesto with multiple schools coexisting. one school per major section.
+- ARTIFACT: period piece committed to one school and one specific year.
+
+if the user named a school but not a register, ask. in SHOWCASE register, `pick-school <name>` locks the HERO / default school; per-section schools are picked during build.
+
 steps.
 
-1. read `schools/<chosen>.md` in full.
-2. read `MANIFESTO.md` if not already in context this session.
-3. confirm the school is locked for the session.
-4. summarize the constraints absorbed:
+1. read `references/page-register.md` and confirm the register.
+2. read `schools/<chosen>.md` in full.
+3. read `MANIFESTO.md` if not already in context this session.
+4. confirm both the school AND the register are locked for the session.
+5. summarize the constraints absorbed:
+   - register (and its ration scaling)
    - palette (which set, which hues)
    - type system (workhorse + shouter)
    - structural rules (borders, radius, shadows, grid)
    - motif vocabulary
    - what's banned in this school
-5. ask the user if they want to override anything before they invoke another command.
+6. ask the user if they want to override anything before they invoke another command.
 
 if asked to switch schools mid-session, confirm first. switching means starting any in-progress build over. don't half-blend schools.
 

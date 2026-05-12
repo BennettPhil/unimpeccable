@@ -81,7 +81,15 @@ captions:         14–16px
 
 ## THE CARSON MOMENT
 
-one per long page. pick ONE option:
+ration scales with register (see `references/page-register.md`).
+
+- PRODUCT register: one per page.
+- SHOWCASE register: one per ~1000px of scroll. a typical long manifesto page gets 3 to 5 carson moments total, distributed across sections.
+- ARTIFACT register: per the school's rules. carson-raygun school allows 2 to 3 per page.
+
+zero on a long page is a TIMIDITY failure. more than the ration is a SLOP failure.
+
+pick ONE option per moment.
 
 1. **mid-word break** — `word-break: break-all` on one headline only. let `INSTAL` wrap to `LATION` mid-word.
 2. **overlap pair** — two headlines positioned over each other at 60% opacity each. read separately by squinting.
@@ -89,8 +97,9 @@ one per long page. pick ONE option:
 4. **runaway leading** — `line-height: 2.8` on one stanza. it's a poem now.
 5. **color-jumping word** — one word in a line set in a different palette color from the rest.
 6. **flipped baseline** — one heading set with `writing-mode: vertical-rl` along a section edge.
+7. **floating ghost word** — a single word in 400–600px Impact, paper-white, opacity 0.08–0.12, behind everything, rotated -8 to -4 degrees, hard cropped by the viewport. the page mutters something at the user. one of these is permitted per long page in addition to the per-section moments above.
 
-never two Carson moments visible at once. never on functional UI (nav, form fields, error messages).
+never two Carson moments visible AT THE SAME TIME on screen. distribute them down the scroll. never on functional UI (nav, form fields, error messages).
 
 ## TEXT BLOCKS
 

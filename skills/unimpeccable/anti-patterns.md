@@ -63,14 +63,34 @@ things that smell like impeccable's house. if any of these appear in your output
 
 ---
 
-## THE FINAL QUESTION
+## THE TIMIDITY CHECK
 
-before shipping, ask: **could this appear on a Y Combinator company's homepage in 2024?**
+the third failure mode. things that score 100% on SLOP and 100% on POLISH but still feel tame. well-designed anti-design is still impeccable's territory wearing a costume.
 
-if yes — POLISH FAIL. start over.
+| # | symptom | why it's timid |
+|---|---|---|
+| 1 | page is a tidy stack of horizontal stripes | each section calmly stacks on the next. sections must crash into each other. authorize section bleed. see `references/broken-grid.md`. |
+| 2 | all sibling items share dimensions | a row of 8 schools at the same height is a catalogue, not a manifesto. each footprint must match its content's character. scale variation across siblings is mandatory in showcase register. |
+| 3 | ONE carson moment on a long-scroll page | one is the floor for a single-screen page. long pages need one per ~1000px scroll. |
+| 4 | one school wallpapers a multi-school page | in showcase register, a manifesto page changes religion as you scroll. each major section adopts its content's school as its entire compositional grammar. one wallpaper is product register; if the page is a manifesto, it's wrong. |
+| 5 | no ambient motion on a non-static page | static is fine. but if the page moves at all, it must include at least one tic, one snap-flinch, or one scroll-triggered follower. fade-in-on-scroll alone is impeccable. |
+| 6 | spacing rhythm identical across sections | same vertical padding everywhere. the eye knows what's coming. vary it wildly. |
+| 7 | every break is component-level | overlap inside a card, rotation on a single element. the PAGE itself never breaks its frame. authorize the three page-level breaks. |
+| 8 | "could this be more extreme?" — yes, with no rebuttal | if the user, looking at the result, said "more extreme" and you can't argue back, you failed the timidity check. |
 
-before shipping, ask: **could this be mistaken for a broken page?**
+---
 
-if yes — SLOP FAIL. start over.
+## THE FINAL QUESTIONS
 
-the gap between those two is where unimpeccable lives.
+three, in order.
+
+**SLOP**: could this be mistaken for a broken page?
+if yes → SLOP FAIL. start over.
+
+**POLISH**: could this appear on a Y Combinator company's homepage in 2024?
+if yes → POLISH FAIL. start over.
+
+**TIMIDITY**: if the user said "make it more extreme," what would they point at?
+if you can list five things → TIMIDITY FAIL. push further before shipping.
+
+the narrow gap between all three is where unimpeccable lives.

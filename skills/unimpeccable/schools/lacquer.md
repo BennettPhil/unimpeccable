@@ -92,7 +92,13 @@ brutalism carries the load. these are not suggestions.
 
 ## MEMPHIS MOTIFS
 
-rationed, not wallpapered. 2–3 per section MAX. inline SVG, no images.
+rationed, not wallpapered. ration scales with register (see `references/page-register.md`).
+
+- PRODUCT register: 2 to 3 per section.
+- SHOWCASE register: 3 to 5 per major section. memphis-school sections in showcase mode should sit at the upper end.
+- ARTIFACT register: per the school's rules.
+
+inline SVG, no images. fewer than 2 in any section means the section won't read as memphis — that's a timidity failure, not restraint.
 
 - squiggle line (3px black stroke, 4 humps, 200px wide)
 - dot grid (5x5, alternating two palette colors, 8px dots, 24px spacing)
