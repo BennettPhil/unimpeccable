@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unimpeccable. the hostile fork.</title>
+<meta name="description" content="anti-design as a skill. authored chaos, rooted in a real movement. the hostile fork of impeccable and frontend-design.">
+<style>
+  /* ─── BASE ─────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
+  html, body { background: #F4F0E6; color: #000; }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.35;
+    overflow-x: hidden;
+  }
+  :root {
+    --acid-lime: #C8FF00;
+    --acid-magenta: #FF2E93;
+    --acid-cyan: #00C2FF;
+    --acid-orange: #FF6A00;
+    --ink: #000;
+    --paper: #F4F0E6;
+  }
+  .shouter {
+    font-family: "Arial Black", "Helvetica Inserat", Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 0.85;
+  }
+  a { color: inherit; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+  a:hover { background: var(--acid-magenta); color: var(--ink); text-decoration: none; }
+  :focus-visible { outline: 4px solid var(--acid-magenta); outline-offset: 2px; }
+
+  /* ─── HERO ─────────────────────────────────────── */
+  section.hero {
+    background: var(--paper);
+    border-bottom: 6px solid var(--ink);
+    padding: 24px 0 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero h1 {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(72px, 22vw, 360px);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    margin-left: -1.5vw;
+  }
+  .hero .sub {
+    font-size: clamp(20px, 2.6vw, 32px);
+    margin: 24px 24px 0;
+    max-width: 880px;
+  }
+  .hero .sub .strike { text-decoration: line-through; text-decoration-thickness: 4px; }
+  .hero .meta {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 14px;
+    margin: 16px 24px 0;
+  }
+  .hero .squiggle {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    width: clamp(120px, 16vw, 240px);
+    height: clamp(40px, 5vw, 80px);
+  }
+
+  /* ─── CARSON MOMENT ───────────────────────────── */
+  section.carson {
+    background: var(--acid-magenta);
+    border-bottom: 6px solid var(--ink);
+    padding: 80px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .carson .stack { position: relative; height: clamp(140px, 26vw, 360px); }
+  .carson .stack > span {
+    position: absolute;
+    top: 0; left: 0;
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(120px, 26vw, 400px);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+  }
+  .carson .stack > span:nth-child(1) { color: var(--ink); opacity: 0.7; }
+  .carson .stack > span:nth-child(2) { color: var(--paper); opacity: 0.7; top: clamp(20px, 4vw, 60px); left: clamp(40px, 8vw, 120px); }
+
+  /* ─── LAWS ────────────────────────────────────── */
+  section.laws {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 0;
+    border-bottom: 6px solid var(--ink);
+  }
+  .laws h2 {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(48px, 10vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    padding: 0 24px 32px;
+  }
+  .laws .row {
+    display: grid;
+    grid-template-columns: 12% 88%;
+    gap: 8px;
+    padding: 24px;
+    border-top: 3px solid var(--paper);
+    align-items: baseline;
+  }
+  .laws .num {
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    line-height: 1;
+    color: var(--acid-lime);
+  }
+  .laws .text { font-size: clamp(20px, 2.4vw, 28px); }
+  .laws .text strong {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  /* ─── ENEMY ───────────────────────────────────── */
+  section.enemy {
+    background: var(--acid-lime);
+    padding: 64px 24px;
+    border-bottom: 6px solid var(--ink);
+  }
+  .enemy h2 {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(48px, 10vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+  .enemy ul { list-style: none; }
+  .enemy li {
+    font-size: clamp(20px, 3vw, 36px);
+    padding: 16px 0;
+    border-top: 3px solid var(--ink);
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .enemy li:last-child { border-bottom: 3px solid var(--ink); }
+
+  /* ─── SCHOOLS ─────────────────────────────────── */
+  section.schools { padding: 64px 24px; background: var(--paper); border-bottom: 6px solid var(--ink); }
+  .schools h2 {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(48px, 10vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+  .schools-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px; }
+  .school {
+    border: 4px solid var(--ink);
+    padding: 20px;
+    box-shadow: 8px 8px 0 0 var(--ink);
+    background: var(--paper);
+    min-height: 180px;
+  }
+  .school .name {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(22px, 2.4vw, 32px);
+    line-height: 0.9;
+    margin-bottom: 12px;
+  }
+  .school .blurb { font-size: 16px; line-height: 1.4; }
+  .school:nth-child(1) { grid-column: span 5; background: var(--acid-magenta); transform: rotate(-1deg); box-shadow: 12px 12px 0 0 var(--ink); }
+  .school:nth-child(2) { grid-column: span 7; }
+  .school:nth-child(3) { grid-column: span 4; background: var(--acid-cyan); }
+  .school:nth-child(4) { grid-column: span 4; }
+  .school:nth-child(5) { grid-column: span 4; background: var(--acid-orange); transform: rotate(1deg); }
+  .school:nth-child(6) { grid-column: span 8; }
+  .school:nth-child(7) { grid-column: span 6; background: var(--acid-lime); }
+  .school:nth-child(8) { grid-column: span 6; background: var(--ink); color: var(--paper); }
+
+  /* ─── INSTALL ─────────────────────────────────── */
+  section.install { padding: 64px 24px; background: var(--paper); border-bottom: 6px solid var(--ink); }
+  .install h2 {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(48px, 10vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+  .install p {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    max-width: 720px;
+  }
+  .install pre {
+    background: var(--ink);
+    color: var(--acid-lime);
+    padding: 24px;
+    border: 4px solid var(--ink);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    overflow-x: auto;
+    box-shadow: 12px 12px 0 0 var(--acid-magenta);
+    line-height: 1.5;
+  }
+
+  /* ─── COMMANDS ────────────────────────────────── */
+  section.commands { padding: 64px 24px; background: var(--acid-cyan); border-bottom: 6px solid var(--ink); }
+  .commands h2 {
+    font-family: "Arial Black", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(48px, 10vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+  .commands table { width: 100%; border-collapse: collapse; }
+  .commands th, .commands td {
+    padding: 12px 8px;
+    border-top: 3px solid var(--ink);
+    text-align: left;
+    font-size: 18px;
+    vertical-align: top;
+  }
+  .commands tr:last-child td { border-bottom: 3px solid var(--ink); }
+  .commands th { font-family: "Arial Black", Impact, sans-serif; text-transform: uppercase; font-size: 16px; }
+  .commands code {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: var(--ink);
+    color: var(--acid-lime);
+    padding: 2px 8px;
+  }
+
+  /* ─── FOOTER ──────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 32px 24px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 17% 83%;
+    gap: 16px;
+  }
+  footer p:first-of-type { font-family: "Arial Black", Impact, sans-serif; text-transform: uppercase; font-size: 14px; line-height: 1.3; }
+  footer a { color: var(--acid-lime); }
+  footer a:hover { background: var(--acid-lime); color: var(--ink); }
+
+  /* ─── MEMPHIS MOTIFS ─────────────────────────── */
+  section { position: relative; }
+  .motif { position: absolute; pointer-events: none; }
+  .motif.dotgrid { top: 24px; right: 24px; width: clamp(80px, 14vw, 140px); height: clamp(80px, 14vw, 140px); }
+  .motif.hatch { top: 0; right: 0; width: clamp(28px, 4vw, 48px); height: 100%; }
+  .motif.terrazzo { bottom: 24px; right: 24px; width: clamp(160px, 22vw, 240px); height: clamp(80px, 11vw, 120px); }
+  @media (max-width: 492px) {
+    .motif.dotgrid { width: 64px; height: 64px; }
+    .motif.terrazzo { width: 120px; height: 60px; bottom: 16px; right: 16px; }
+  }
+
+  /* ─── HALFTONE OVERLAY ────────────────────────── */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>");
+  }
+
+  /* ─── RESPONSIVE (non-canonical breakpoints) ──── */
+  @media (max-width: 923px) {
+    .laws .row { grid-template-columns: 18% 82%; }
+    .schools-grid { grid-template-columns: repeat(6, 1fr); }
+    .school:nth-child(n) { grid-column: span 6; transform: none; }
+    footer { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 492px) {
+    .hero h1 { font-size: clamp(56px, 18vw, 120px); }
+    .laws .row { grid-template-columns: 1fr; padding: 16px; }
+    .laws .num { font-size: clamp(40px, 14vw, 72px); }
+    .schools-grid { grid-template-columns: 1fr; }
+    .commands th, .commands td { font-size: 14px; padding: 8px 4px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition: none !important; }
+    .school { transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>unimpeccable.</h1>
+  <p class="sub"><span class="strike">the impeccable saas reflex.</span><br>
+    the hostile fork of <a href="https://github.com/pbakaus/impeccable">impeccable</a> and <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">frontend-design</a>.</p>
+  <p class="meta">an agent skill. anti-design as a discipline. authored chaos, not slop.</p>
+  <svg class="squiggle" viewBox="0 0 240 80" aria-hidden="true">
+    <path d="M0,40 Q30,0 60,40 T120,40 T180,40 T240,40" fill="none" stroke="#000" stroke-width="6"/>
+  </svg>
+</section>
+
+<!-- CARSON MOMENT -->
+<section class="carson" aria-hidden="true">
+  <div class="stack">
+    <span>anti</span>
+    <span>design</span>
+  </div>
+</section>
+
+<!-- LAWS -->
+<section class="laws">
+  <svg class="motif dotgrid" viewBox="0 0 120 120" aria-hidden="true">
+    <defs>
+      <pattern id="dotPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="6" cy="6" r="6" fill="#C8FF00"/>
+      </pattern>
+    </defs>
+    <rect width="120" height="120" fill="url(#dotPat)"/>
+  </svg>
+  <h2>the five laws.</h2>
+  <div class="row"><div class="num">1.</div><div class="text"><strong>chaos must be authored.</strong> if you can't justify the break, fix it. random is not radical.</div></div>
+  <div class="row"><div class="num">2.</div><div class="text"><strong>structure carries the load.</strong> brutalism underneath. memphis on top. without structure you have soup.</div></div>
+  <div class="row"><div class="num">3.</div><div class="text"><strong>illegibility is rationed.</strong> one carson moment per long page. more, and meaning evaporates.</div></div>
+  <div class="row"><div class="num">4.</div><div class="text"><strong>the floor is functional.</strong> decoration can be illegible. navigation cannot. forms cannot. cruelty is not the point.</div></div>
+  <div class="row"><div class="num">5.</div><div class="text"><strong>the enemy is the average.</strong> if your output could ship on a y combinator landing page, you failed. start over.</div></div>
+</section>
+
+<!-- ENEMY -->
+<section class="enemy">
+  <svg class="motif hatch" viewBox="0 0 32 400" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <pattern id="hatchPat" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="8" stroke="#000" stroke-width="3"/>
+      </pattern>
+    </defs>
+    <rect width="32" height="400" fill="url(#hatchPat)"/>
+  </svg>
+  <h2>the enemy.</h2>
+  <ul>
+    <li>centered hero with subtle gradient.</li>
+    <li>"get started →" with a chevron.</li>
+    <li>inter at 14 / 24, line-height 1.5.</li>
+    <li>rounded-2xl + shadow-sm.</li>
+    <li>the three-column feature grid.</li>
+    <li>purple. specifically <code style="font-family:inherit">#8b5cf6</code>.</li>
+    <li>"trusted by" logo strip in grayscale.</li>
+    <li>whitespace described as "breathing".</li>
+    <li>dark mode that is the light mode inverted.</li>
+  </ul>
+</section>
+
+<!-- SCHOOLS -->
+<section class="schools">
+  <h2>eight schools.</h2>
+  <div class="schools-grid">
+    <div class="school"><div class="name">lacquer</div><div class="blurb">the house style. memphis palette over brutalist load-bearing structure, with rationed carson moments and a zine texture layer.</div></div>
+    <div class="school"><div class="name">memphis</div><div class="blurb">sottsass. milano. 1981. clashing laminate, squiggle, dot grid, terrazzo. asymmetric forms. sincere kitsch.</div></div>
+    <div class="school"><div class="name">radical italian</div><div class="blurb">archizoom. superstudio. 1960s. design as critique. monumental scale. photo collage. infinite grids that extend past the frame.</div></div>
+    <div class="school"><div class="name">carson / ray gun</div><div class="blurb">david carson, 1990s. broken type. overlap. mid-word break. emotional impact over legibility. illegibility as message.</div></div>
+    <div class="school"><div class="name">web brutalism</div><div class="blurb">raw html. system fonts. default blue links. no style block. the page recedes so the content shows.</div></div>
+    <div class="school"><div class="name">neubrutalism</div><div class="blurb">2020s. hard borders, hard offset shadows, zero radius, acid color. been laundered into a tailwind preset. vary borders, vary shadows, escape the template.</div></div>
+    <div class="school"><div class="name">zine / diy</div><div class="blurb">photocopied. stapled. handed to you. ransom-note headlines. typewriter body. halftone photos. visible production marks.</div></div>
+    <div class="school"><div class="name">y2k / dirtstyle</div><div class="blurb">1998 to 2003. chrome. lens flare. hud overlays. designers republic. hardest school. pick a year. channel an artifact. do not nostalgia-meme.</div></div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section class="install">
+  <svg class="motif terrazzo" viewBox="0 0 200 100" aria-hidden="true">
+    <polygon points="10,15 45,5 50,35 25,50" fill="#FF2E93" stroke="#000" stroke-width="2"/>
+    <polygon points="60,10 95,25 85,55 50,45" fill="#00C2FF" stroke="#000" stroke-width="2"/>
+    <polygon points="105,5 145,15 150,45 110,50 100,30" fill="#FF6A00" stroke="#000" stroke-width="2"/>
+    <polygon points="155,30 195,25 200,70 160,80" fill="#C8FF00" stroke="#000" stroke-width="2"/>
+    <polygon points="20,65 60,60 70,90 30,95" fill="#000"/>
+  </svg>
+  <h2>install.</h2>
+  <p>one line. via skills.sh.</p>
+<pre><code>npx skills add BennettPhil/unimpeccable</code></pre>
+  <p>then invoke.</p>
+<pre><code>/unimpeccable:spawn "a landing page for my band that argues with itself"</code></pre>
+  <p>or lock a school first.</p>
+<pre><code>/unimpeccable:pick-school memphis
+/unimpeccable:spawn "a poster site for a basement noise show"</code></pre>
+</section>
+
+<!-- COMMANDS -->
+<section class="commands">
+  <h2>nine commands.</h2>
+  <table>
+    <thead><tr><th>command</th><th>what it does</th></tr></thead>
+    <tbody>
+      <tr><td><code>pick-school</code></td><td>lock the school for the session. all subsequent work uses it.</td></tr>
+      <tr><td><code>spawn</code></td><td>build a full anti-design page from a brief. runs the four-layer loop.</td></tr>
+      <tr><td><code>ruin</code></td><td>take a polished page and break it. preserve every functional surface.</td></tr>
+      <tr><td><code>shred</code></td><td>layout-only fragmentation. four authorized grid breaks. no type or palette changes.</td></tr>
+      <tr><td><code>clash</code></td><td>generate a discordant palette in the locked school. 3 to 5 acid hues plus black plus paper-white.</td></tr>
+      <tr><td><code>typecast</code></td><td>pick the 2-font system from system fonts only. set the scale.</td></tr>
+      <tr><td><code>downgrade</code></td><td>replace impeccable defaults with anti-design counterparts in place.</td></tr>
+      <tr><td><code>audit</code></td><td>scan for polish tells and slop tells. report counts and locations. do not modify.</td></tr>
+      <tr><td><code>manifesto</code></td><td>generate anti-marketing copy in the skill's voice.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p>UNIMPECCABLE<br>v0. 2026.</p>
+  </div>
+  <div>
+    <p>an agent skill for claude code. authored chaos rooted in a real movement.<br>
+    we hold WCAG AA on functional surfaces. we do not hold it on decoration.<br>
+    we are not impeccable. we are the other thing.<br>
+    <a href="https://github.com/BennettPhil/unimpeccable">github.</a> &nbsp; <a href="../skills/unimpeccable/MANIFESTO.md">the manifesto.</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
