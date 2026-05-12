@@ -92,7 +92,7 @@ in zine school, the voice gets more personal:
 
 ## WHEN TO REACH FOR THIS SCHOOL
 
-- manifesto pages, essays, position papers (overlaps with Radical Italian, but more personal)
+- manifesto pages, essays, position papers (overlaps with web brutalism's cold honesty, but warmer and handmade)
 - "story behind the project" pages
 - newsletter archives
 - small community / collective sites

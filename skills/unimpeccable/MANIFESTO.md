@@ -31,10 +31,11 @@ we are **authored chaos.**
 ## WHAT WE ARE
 
 we are Memphis tearing up the modernist brief in 1981.
-we are Archizoom drawing the No-Stop City.
 we are Carson setting the interview in Zapf Dingbats because the interview was boring.
 we are the brutalist web before it got a Webflow template.
 we are the zine, photocopied, stapled, handed to you.
+we are the geocities homepage with the dancing baby and the visitor counter.
+we are the acid club poster you couldn't read but couldn't look away from.
 
 we are a school.
 every move points at the school.

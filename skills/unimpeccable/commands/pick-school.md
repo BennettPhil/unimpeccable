@@ -5,7 +5,7 @@ argument-hint: <school-name>
 
 valid schools.
 
-lacquer, memphis, radical-italian, carson-raygun, web-brutalism, neubrutalism, zine-diy, y2k-dirtstyle.
+lacquer, memphis, carson-raygun, web-brutalism, neubrutalism, zine-diy, y2k-dirtstyle, geocities, acid-graphics.
 
 if no school named, default to lacquer. announce the default.
 

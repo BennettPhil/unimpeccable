@@ -13,12 +13,13 @@ impeccable wants your interface to be impeccable. we don't.
 unimpeccable is a skill that makes claude produce intentionally anti-design interfaces in the lineage of:
 
 - memphis group (sottsass, milano, 1981)
-- italian radical design (archizoom, superstudio, 1960s)
 - david carson / ray gun (1990s)
 - web brutalism (2010s)
 - neubrutalism (2020s)
 - zine / diy (riot grrrl, punk, photocopy culture)
 - y2k / dirtstyle (1998 to 2003)
+- geocities / sincere old web (1995 to 2002)
+- acid graphics (2018 to present)
 
 plus **lacquer**, a house style that fuses memphis palette + brutalist structure + rationed carson moments + zine texture.
 
@@ -93,7 +94,8 @@ skills/unimpeccable/
   schools/
     lacquer.md              the house style
     memphis.md
-    radical-italian.md
+    geocities.md
+    acid-graphics.md
     carson-raygun.md
     web-brutalism.md
     neubrutalism.md

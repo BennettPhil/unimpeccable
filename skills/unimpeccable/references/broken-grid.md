@@ -64,7 +64,7 @@ use this 1 to 2 times per page. more = soup. SECTION BOUNDARIES MUST CRASH at ma
 
 ### 6. VIEWPORT EXTENSION
 
-content extends past the right edge of the viewport intentionally. radical-italian's "il monumento continuo" is the canonical example — a grid that doesn't stop at the page edge.
+content extends past the right edge of the viewport intentionally. a marquee that runs off the right edge (geocities), an oversized extruded headline cropped by the viewport (acid graphics), a memphis terrazzo block that the page can't contain.
 
 implement.
 

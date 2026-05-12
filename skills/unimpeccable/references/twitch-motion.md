@@ -113,7 +113,7 @@ a decorative element associated with a school sticks to the viewport edge until 
 
 the follower sits at `position: sticky` inside its parent section. when the user scrolls into the next section, the parent scrolls off and the follower disappears.
 
-works for: memphis squiggle, y2k HUD bracket, zine paper-clip, neubrutalism sticker corner, radical-italian grid line. one follower per major section, showcase register only.
+works for: memphis squiggle, y2k HUD bracket, zine paper-clip, neubrutalism sticker corner, geocities animated GIF, acid-graphics 3D object. one follower per major section, showcase register only.
 
 ### the signature moment
 

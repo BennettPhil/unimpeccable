@@ -1,6 +1,6 @@
 ---
 name: unimpeccable
-description: Generate intentionally anti-design web interfaces in the lineage of Memphis Group, Italian Radical Design, Carson/Ray Gun, web brutalism, neubrutalism, zine/DIY, and Y2K-dirt. Use when the user asks for anti-design, ugly-on-purpose, anarchic, irreverent, brutalist, anti-corporate, hostile, maximalist, or "unimpeccable" UIs. Chaos must be authored — every break points at a named school. NOT a fixer for accidentally-bad layouts; NOT a tool for production SaaS without explicit anti-design intent.
+description: Generate intentionally anti-design web interfaces in the lineage of Memphis Group, Carson/Ray Gun, web brutalism, neubrutalism, zine/DIY, Y2K-dirt, Geocities-era amateur web, and acid graphics. Use when the user asks for anti-design, ugly-on-purpose, anarchic, irreverent, brutalist, anti-corporate, hostile, maximalist, or "unimpeccable" UIs. Chaos must be authored — every break points at a named school. NOT a fixer for accidentally-bad layouts; NOT a tool for production SaaS without explicit anti-design intent.
 ---
 
 # unimpeccable
@@ -18,6 +18,8 @@ invoke when the user asks for:
 - Carson, Ray Gun, broken type, illegibility as feeling
 - zine, DIY, photocopy, ransom note, riot grrrl
 - Y2K, dirtstyle, frutiger aero, vaporwave, glitch
+- Geocities, old web, vernacular web, personal homepage, neocities, "made by hand"
+- acid graphics, acid design, club poster, rave flyer, chromatic aberration, hyper-typography
 - anarchic, irreverent, maximalist, ugly-on-purpose, anti-corporate, hostile
 - "the opposite of impeccable" / "the opposite of frontend-design" / "not generic saas"
 
@@ -35,7 +37,7 @@ every job runs the same loop. no shortcuts.
 
 1. **pick the register, then the school.** read `references/page-register.md`. register is one of: PRODUCT (single page selling or operating one thing), SHOWCASE (long-scroll manifesto with multiple schools), or ARTIFACT (period piece committed to one school and one specific year). infer from the brief or ask. wrong-register pages are the #1 cause of timidity failure.
 
-   then pick the school. Lacquer (house default), Memphis, Radical Italian, Carson, Web Brutalism, Neubrutalism, Zine/DIY, Y2K-Dirt. read `schools/<name>.md`. if no school is named, default to **Lacquer** and announce both choices. in SHOWCASE register, you'll pick one school per major section, not one per page.
+   then pick the school. Lacquer (house default), Memphis, Carson, Web Brutalism, Neubrutalism, Zine/DIY, Y2K-Dirt, Geocities, Acid Graphics. read `schools/<name>.md`. if no school is named, default to **Lacquer** and announce both choices. in SHOWCASE register, you'll pick one school per major section, not one per page.
 2. **lock the constraints.** palette (3–5 acid tones + true black + paper-white, never #FFFFFF). type (exactly two system fonts, no webfonts, plus the `<pre><code>` exception). structure rules from the school. **do not deviate mid-build.**
 3. **build in four layers, in order:**
    - **structure** — brutalist scaffolding. full-bleed, gutter-less or near-gutter-less, hard borders, zero border-radius. in SHOWCASE register, apply page-level breaks (section bleed, viewport extension, scale variation across siblings) — see `references/broken-grid.md`.
